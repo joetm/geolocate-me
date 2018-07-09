@@ -7,14 +7,14 @@
 if ("geolocation" in navigator) {
   /* geolocation is available */
 	console.info('geolocation IS available');
-
-
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log(position.coords.latitude, position.coords.longitude);
+  });
 } else {
 	console.error('geolocation IS NOT available');
 }
 //-->
 </script>
-
 </head>
 <body>
 
