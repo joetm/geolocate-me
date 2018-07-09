@@ -20,16 +20,16 @@ var ID = findGetParameter('entry.427085628');
 
 if ("geolocation" in navigator) {
   /* geolocation is available */
-	console.info('geolocation IS available');
+	// console.info('geolocation IS available');
   navigator.geolocation.getCurrentPosition(function(position) {
-    console.log(position.coords.latitude, position.coords.longitude);
+    // console.log(position.coords.latitude, position.coords.longitude);
     // var el = document.getElementById('location');
     // el.innerHTML = position.coords.latitude + "," + position.coords.longitude;
     // redirect
     window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSf4jo3zbCmJZO23EueLpYdy4kBocIDJJTaL2TshJ77HSOBRDw/viewform?usp=pp_url&entry.1336255418=' + position.coords.latitude + ',' + position.coords.longitude + '&entry.427085628=' + ID);
   });
 } else {
-	console.error('geolocation IS NOT available');
+	// console.error('geolocation IS NOT available');
   window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSf4jo3zbCmJZO23EueLpYdy4kBocIDJJTaL2TshJ77HSOBRDw/viewform?usp=pp_url&entry.1336255418=NA&entry.427085628=' + ID);
 }
 //-->
